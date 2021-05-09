@@ -8,7 +8,7 @@ html{
 body{
   background-color: #ffffff;
   color: #333333;
-  font-family: font-family: 'ヒラギノ角ゴシック','Hiragino Sans',YuGothic,'Yu Gothic','ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 h1, h2, h3, h4, h5, p{
