@@ -115,7 +115,7 @@ header .inner #mobilemenu_list li a:hover{
 main .mainimage{
   background-image: url(../images/index/sp_main.jpg);
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: left bottom;
   background-size: cover;
   height: 284px;
 }
