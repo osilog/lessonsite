@@ -71,7 +71,7 @@ header .inner #mobilemenu li{
 header .inner #mobilemenu_list{
   display: none;
   position: absolute;
-  background-color: rgba(255,255, 255, 0.7);
+  background-color: rgba(255,255, 255, 0.8);
   border: 1px solid #5BBCAD;
   right: 0px;
   text-decoration: 26px;
@@ -135,10 +135,11 @@ main .mainclolum{
 main .mainclolum .inner{
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 main .mainclolum .inner section{
-  float: none;
   width: 276px;
   height: 276px;
   border-radius: 138px;
@@ -179,6 +180,8 @@ main .informationarea {
     padding-bottom: 40px;
 }
 main .informationarea .inner {
+  display: flex;
+  flex-direction: column;
   width: 96%;
   margin: auto 2%;
   padding-top: 20px;
@@ -186,7 +189,6 @@ main .informationarea .inner {
 }
 
 main .informationarea .inner .mainindormation{
-  float: none;
   width: 100%;
 }
 
@@ -198,19 +200,16 @@ main .informationarea .inner .mainindormation dl{
   margin: 0;
 }
 main .informationarea .inner .mainindormation dt{
-  float: none;
   width: 100px;
   height: 28px;
   line-height: 28px;
-    margin-top: 16px;
+  margin-top: 16px;
   padding: 0;
 }
 
 main .informationarea .inner .mainindormation dd{
-  margin-left: 0px;
-  margin-top: 13px;
+  margin: 13px 0 0 0;
   width: 100%;
-
 }
 
 main .informationarea .inner .mainfacebook{
@@ -228,6 +227,9 @@ main .informationarea .inner .mainfacebook{
 footer{
 }
 
+footer .inner{
+  display: none;
+}
 
 footer .footernav_mobile{
 
@@ -264,6 +266,7 @@ footer .footernav_mobile ul li.current a{
 
 
 footer .copyright{
+  font-size: 1rem;
   height: 40px;
   line-height: 40px;
 }

@@ -211,40 +211,41 @@ main .mainclolum .inner .mainclolum_btn a svg{
 
 /*インフォメーションエリア*ここから*/
 main .informationarea {
-
   margin-top: 200px;
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 main .informationarea .inner {
+  display: flex;
+  flex-direction:column;
   width: 640px;
   padding-top: 20px;
   margin: 0 auto 45px auto;
-
 }
 
 main .informationarea .inner .mainindormation{
-  float: none;
-  width: 100%;
 }
 
 main .informationarea .inner .mainindormation h2{
   margin-bottom: 30px;
+  width: 640px;
 }
+
 main .informationarea .inner .mainindormation dl{
-  width: 100%;
+  width: 640px;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 main .informationarea .inner .mainindormation dt{
   width: 100px;
   height: 28px;
   line-height: 28px;
-  padding: 0;
+  margin-right: 18px;
 }
 
 main .informationarea .inner .mainindormation dd{
-  margin-left: 115px;
   margin-bottom: 15px;
-  width: 525px;
+  width: calc(100% - 118px);
 
 }
 
@@ -260,7 +261,9 @@ main .informationarea .inner .mainfacebook{
 /*フッターエリアここから*/
 
 
-
+footer .inner{
+  display: none;
+}
 
 footer .footernav_mobile{
 

@@ -6,9 +6,14 @@ html{
     /*デフォルトのフォントサイズを10pxに。1remが10px*/
 }
 body{
+  box-sizing: border-box;
   background-color: #ffffff;
   color: #333333;
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+body *{
+   box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, p{
@@ -65,10 +70,16 @@ header .inner nav{
   font-size: 1.4rem;
 }
 
+header .inner ul{
+  /*flexboxで追加する*/
+  display:flex;
+  flex-direction: row;
+}
+
 header .inner ul li{
   font-weight: bold;;
   list-style-type: none;
-  float: left;
+  /*float: left;*/
   margin-right: 28px;
   padding: 0 0 5px 0;
 }
@@ -118,6 +129,8 @@ z-index: 1;
 main .mainclolum .inner{
   width: 960px;
   margin:-69px auto 0;
+  display: flex;/*flexbox追加*/
+  flex-direction: row;
 
 }
 
@@ -128,7 +141,7 @@ main .mainclolum .inner section{
   border-radius: 138px;
   background-color: #5BBCAD;
   text-align:center;
-  float: left;
+  /*float: left;*/
   margin-right: 67px;
 }
 
@@ -193,22 +206,24 @@ main .mainclolum .inner .mainclolum_btn a:hover svg{
 }
 
 main .informationarea{
-  clear: both;
+  /*clear: both;*/
   width: 100%;
   background-color: #F0F0F0;
   margin-top: 240px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 main .informationarea .inner{
   width: 960px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 main .informationarea .inner .mainindormation{
-  float: right;
+  /*float: right;*/
   width: 630px;
-  margin: 0 0 30px 0;
+  margin: 30px 0 30px 0;
 
 }
 
@@ -216,7 +231,7 @@ main .informationarea .inner .mainfacebook{
   width: 300px;
   height: 380px;
   background-color: #ffffff;
-  margin: 30px 670px 30px 0;
+  margin: 30px 30px 30px 0;
   text-align: center;
   line-height: 380px;
 }
@@ -237,27 +252,33 @@ main .informationarea .inner .mainindormation h2:before{
   border-bottom: 4px solid #5BBCAD ;
 }
 
-main .informationarea .inner .mainindormation dl{
+.mainindormation dt,dd{
+  padding: 0;
+  margin: 0;
+}
+
+.mainindormation .mainindormationtable {
+  width: 640px; /* テーブルの横幅を500pxに指定 */
+  display: flex;/* 子要素のdtとddを横並びにする */
+  flex-wrap:wrap;/* 1つのdtとddで1行になるよう改行させる */
   font-size: 1.4rem;
   line-height: 1.5em;
 }
 
 
-main .informationarea .inner .mainindormation dt{
-  float: left;
-  background-color: #666666;
-  border-left: 4px solid #5BBCAD;
-  color: #ffffff;
-  width: 97px;
-  margin: 0 20px 0 0;
-  padding: 8px 0 7px 0;
-  text-align: center;
+.mainindormation .mainindormationtable dt{
+    width: 100px; /* dt（見出し項目）の横幅を200pxに指定 */
+    background-color: #666666;
+    border-left: 4px solid #5BBCAD;
+    color: #ffffff;
+    margin: 0 20px 0 0;;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
 }
-
-main .informationarea .inner .mainindormation dd{
-  margin-left: 120px;
-  margin-bottom: 15px;
-  width: 510px;
+.mainindormation .mainindormationtable dd {
+    width: calc(100% - 120px); /* テーブル幅からdtを引いた分の横幅を指定。 */
+    margin-bottom: 15px;
 }
 
 
@@ -276,13 +297,12 @@ footer .inner{
   padding: 50px 0 61px 0;
   margin: 0 auto;
   width: 960px;
-  overflow: hidden;
-
+  display: flex;
 }
 footer .inner address{
   width: 300px;
   line-height: 1.5em;
-  float: left;
+  /*float: left;*/
   font-style: normal;
 }
 
@@ -291,12 +311,13 @@ footer .inner address img{
 }
 
 footer .inner .ftr_navi{
-  margin-left: 350px;
+  margin-left: 65px;
+  display: flex;
+  flex-direction: row;
 }
 
 footer .inner .ftr_navi ul{
   width: 140px;
-  float: left;
   margin: 0 16px 0px 0 ;
   padding: 0;
 }
@@ -353,19 +374,18 @@ footer .copyright{
 
 /*固定表示ここから*/
 
-div.pagetop_btn a{
-  display: block;
-  width: 50px;
-  height: 46px;
-  background-color: rgba(91, 188, 173, 0.8);
-  border: 1px solid #ffffff;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  line-height: 50px;
-  text-align: center;
-  padding: 4px 0 0 0 ;
-  z-index: 100;
+.test dt,dd {
+    margin: 0; /* ブラウザの初期値をクリア */
+    padding: 0; /* ブラウザの初期値をクリア */
 }
-
-/*固定表示ここまで*/
+.test .dlTable {
+    width: 500px; /* テーブルの横幅を500pxに指定 */
+    display: flex; /* 子要素のdtとddを横並びにする */
+    flex-wrap: wrap; /* 1つのdtとddで1行になるよう改行させる */
+}
+.test .dlTable dt {
+    width: 200px; /* dt（見出し項目）の横幅を200pxに指定 */
+}
+.test .dlTable dd {
+    width: calc(100% - 200px); /* テーブル幅からdtを引いた分の横幅を指定。 */
+}
